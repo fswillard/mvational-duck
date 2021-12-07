@@ -1,0 +1,128 @@
+@keyframes display-anim {
+  0% { opacity: 0 }
+  15% { opacity: 0 }
+  80% { opacity: 1 }
+}
+@-webkit-keyframes display-anim {
+  0% { opacity: 0 }
+  15% { opacity: 0 }
+  80% { opacity: 1 }
+}
+@-moz-keyframes display-anim {
+  0% { opacity: 0 }
+  15% { opacity: 0 }
+  80% { opacity: 1 }
+}
+@-o-keyframes display-anim {
+  0% { opacity: 0 }
+  15% { opacity: 0 }
+  80% { opacity: 1 }
+}
+
+html, body {
+  height: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: system-ui, arial, sans-serif;
+  background-color: #3399ff;
+}
+
+body {
+  color: #fafafa;
+  text-align: center;
+  background-image: linear-gradient(255deg, rgba(42, 46, 55, 0.8) 0, rgba(42, 46, 55, 1) 100%, transparent 100%),
+                    linear-gradient(-12deg, rgba(28, 28, 28, 0.4) 0, rgba(28, 28, 28, 0.6) 50%, transparent 50%)
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.3em;
+  font-size: 1.8em;
+}
+
+h3 {
+  margin-top: 0.7em;
+}
+
+small {
+  color: #b3b3b3;
+}
+
+hr {
+  display: none;
+}
+
+.container {
+  width: calc(100% - 250px);
+  margin: 3em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+
+.line {
+  min-width: 30em;
+  animation: display-anim 0.5s ease-in-out;
+}
+.duck {
+  animation: display-anim 0.5s ease-in-out;
+}
+.options {
+  animation: display-anim 1s ease-in-out;
+}
+.footer-box {
+  animation: display-anim 0.5s ease-in-out;
+}
+
+.line, .duck, .options {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.options-copy-msg {
+  opacity: 0;
+  transition: all 1s;
+  padding: 7px 35px;
+  border-radius: 50px ;
+  background-color: rgba(29, 34, 48, 0.85);
+  color: #fafafa;
+  margin: 10px auto 0;
+  width: 70px;
+  font-size: 14px;
+}
+
+.footer {
+  height: 155px;
+  padding: 1em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: #21242b
+}
+
+.footer-box {
+  min-width: 200px;
+  max-width: 30%;
+}
+
+.footer-copyright {
+  padding: 17px 0;
+  background-color: #16181d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adsbygoogle {
+  display: inline-block;
+  width: 728px;
+  margin: 10px 0;
+  min-height: 90px;
+}

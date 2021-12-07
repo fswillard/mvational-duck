@@ -1,0 +1,51 @@
+@media screen and (max-width: 850px) {
+  body {
+    background-image: linear-gradient(255deg, rgba(42, 46, 55, 0.8) 0, rgba(42, 46, 55, 1) 100%, transparent 100%),
+                      linear-gradient(-12deg, rgba(28, 28, 28, 0.4) 0, rgba(28, 28, 28, 0.6) 60%, transparent 60%),
+                      linear-gradient(-246deg, rgba(28, 28, 28, 0.2) 0, rgba(28, 28, 28, 0.4) 22%, transparent 22%);
+  }
+
+  h1 {
+    font-size: 1.3em !important;
+  }
+
+  hr {
+    display: block;
+  }
+
+  .container {
+    width: 100% !important;
+    flex-direction: column !important;
+    margin: 2em auto !important;
+    height: 70%;
+  }
+
+  .line {
+    min-width: unset;
+  }
+
+  .duck {
+    margin-top: 5em;
+    width: 80%;
+  }
+
+  .footer {
+    height: auto;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #21242b;
+  }
+
+  .footer-box {
+    width: 100% !important;
+    padding: 1em 0;
+  }
+
+  .adsbygoogle {
+    width: 320px;
+    min-height: 100px;
+  }
+}
