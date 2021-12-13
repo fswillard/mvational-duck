@@ -16,10 +16,20 @@ a.far {
 a.fas:hover,
 a.fab:hover,
 a.far:hover,
+a.fas:active,
+a.fab:active,
+a.far:active,
+a.fas:visited,
+a.fab:visited,
+a.far:visited,
 a.fas:focus,
 a.fab:focus,
 a.far:focus {
   filter: brightness(1.1);
+  outline: none;
+  -moz-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  -moz-outline-style: none;
 }
 
 a:not(:first-of-type) {

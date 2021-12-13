@@ -15,10 +15,7 @@ var Display = {
   display_shr_code: function(shr_code) {
     // Generate encoded URL with share code
     var loc_href = window.location.href.split("?")[0],
-        // TODO: Validate share link and update enc_href value
-        // enc_href = loc_href + '?q=' + shr_code;
-        enc_href = 'https://www.google.com';
-        // enc_href = encodeURIComponent(loc_href + '?q=' + shr_code);
+        enc_href = loc_href + '?q=' + shr_code;
 
     // Update links href attribute
     $('#options-facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + enc_href + '&t=Pato Motivacional');
