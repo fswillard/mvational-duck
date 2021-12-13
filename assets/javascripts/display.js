@@ -16,10 +16,16 @@ var Display = {
     // Generate encoded URL with share code
     var loc_href = window.location.href.split("?")[0],
         enc_href = loc_href + '?q=' + shr_code;
+        uenc_href = encodeURIComponent(loc_href + '?q=' + shr_code);
 
     // Update links href attribute
+    console.info('href: ' + enc_href);
+    console.info('encode href: ' + uenc_href);
+    
     $('#options-facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + enc_href + '&t=Pato Motivacional');
+    $('#options-u-facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + uenc_href + '&t=Pato Motivacional');
     $('#options-twitter').attr('href', 'https://twitter.com/share?url=' + enc_href + '&text=Pato Motivacional');
+    $('#options-u-twitter').attr('href', 'https://twitter.com/share?url=' + uenc_href + '&text=Pato Motivacional');
 
     // Update Facebook and Twitter action
     $('#options-facebook').click(function(e) {
