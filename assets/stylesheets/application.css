@@ -59,7 +59,7 @@ hr {
 
 .container {
   width: calc(100% - 250px);
-  margin: 3em auto;
+  margin: 2.5em auto 3em;
   display: flex;
   align-items: center;
   justify-content: center;
