@@ -122,10 +122,3 @@ hr {
   align-items: center;
   justify-content: center;
 }
-
-.adsbygoogle {
-  display: inline-block;
-  width: 728px;
-  margin: 10px 0;
-  min-height: 90px;
-}
