@@ -23,7 +23,6 @@ var Display = {
     // Update links href attribute
     $('#options-facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + enc_href + '&t=Pato Motivacional');
     $('#options-twitter').attr('href', 'https://twitter.com/share?url=' + enc_href + '&text=Pato Motivacional');
-    $('#options-whatsapp').attr('href', 'whatsapp://send?text=' + enc_href);
 
     // Update Facebook and Twitter action
     $('#options-facebook').click(function(e) {
