@@ -45,7 +45,7 @@
   }
 
   .adsbygoogle {
-    width: 320px;
-    min-height: 100px;
+    width: 320px !important;
+    min-height: 100px !important;
   }
 }
