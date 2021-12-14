@@ -12,63 +12,12 @@ var Display = {
     $('#line').html('<h1>' + LINES[index].split('|').join('</h1><h1>') + '</h1>')
   },
 
-  display_shr_code: function(shr_code) {
-    // Generate encoded URL with share code
-    var loc_href = window.location.href.split("?")[0],
-        enc_href = loc_href + '?q=' + shr_code;
-        uenc_href = encodeURIComponent(loc_href + '?q=' + shr_code);
-
-    // Update links href attribute
-    console.info('href: ' + enc_href);
-    console.info('encode href: ' + uenc_href);
-    
-    $('#options-facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + enc_href + '&t=Pato Motivacional');
-    $('#options-u-facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + uenc_href + '&t=Pato Motivacional');
-    $('#options-twitter').attr('href', 'https://twitter.com/share?url=' + enc_href + '&text=Pato Motivacional');
-    $('#options-u-twitter').attr('href', 'https://twitter.com/share?url=' + uenc_href + '&text=Pato Motivacional');
-
-    // Update Facebook and Twitter action
-    $('#options-facebook').click(function(e) {
-      e.preventDefault();
-      Display.display_href($(this).attr('href'));
-    });
-
-    $('#options-twitter').click(function(e) {
-      e.preventDefault();
-      Display.display_href($(this).attr('href'));
-    });
-
-    // Assign function to copy button
-    $('#options-copy').click(function(e) {
-      e.preventDefault();
-
-      var textarea = $("<textarea>");
-      $("body").append(textarea);
-      textarea.val(enc_href).select();
-      document.execCommand("copy");
-      textarea.remove();
-
-      $('#options-copy-msg').css('opacity', 1);
-      setTimeout(function() {
-        $('#options-copy-msg').css('opacity', 0);
-      }, 3000);
-    });
-
-    // Assign function to reload button
-    $('#options-reload').click(function(e) {
-      e.preventDefault();
-
-      window.history.pushState('', '', loc_href);
-      location.reload();
-    });
-  },
-
   random_display: function() {
     let index = Math.floor(Math.random() * 101),
         shr_code = CryptKey.encrypt_key(index);
 
     Display.display_line(index);
-    Display.display_shr_code(shr_code);
+    Share.display_shr_code(shr_code);
   },
 
   search_display: function(param) {
@@ -76,6 +25,6 @@ var Display = {
         shr_code = param;
 
     Display.display_line(index);
-    Display.display_shr_code(shr_code);
+    Share.display_shr_code(shr_code);
   }
 }
