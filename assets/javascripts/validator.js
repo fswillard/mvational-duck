@@ -26,7 +26,7 @@ var Validator = {
     if (search == undefined || search == '') {
       return ''
     } else {
-      var regex = new RegExp(/q\=(.*)\&/gi);
+      var regex = new RegExp(/q\=(.+?)\&/gi);
 
       return(regex.exec(search + '&')[1]);
     }

@@ -12,6 +12,11 @@ var Display = {
     $('#line').html('<h1>' + LINES[index].split('|').join('</h1><h1>') + '</h1>')
   },
 
+  display_year: function() {
+    var year = new Date().getFullYear();
+    $('#year').html('&copy; ' + year + ' Pato Motivacional');
+  },
+
   random_display: function() {
     let index = Math.floor(Math.random() * 101),
         shr_code = CryptKey.encrypt_key(index);
