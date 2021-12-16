@@ -31,17 +31,36 @@ var Display = {
     }
   },
 
+  // Display motivational categories
+  display_categories: function() {
+    // Displays all motivational links
+    Display.display_links();
+
+    // Update containers visibility
+    $('.line-container').hide();
+    $('.categories-container').css('display', 'flex');
+    $('.notfound-container').hide();
+  },
+
   // Display motivational line and share buttons
   display_motivational: function(enc_index) {
     let index = CryptKey.decrypt_key(enc_index);
 
     Display.display_line(index);
     Share.display_share_buttons();
+
+    // Update containers visibility
+    $('.line-container').show();
+    $('.categories-container').hide();
+    $('.notfound-container').hide();
   },
 
   display_not_found: function() {
     $('#notfound').html('<h1>Ops..</h1><h1>Essa página não existe</h1>');
-    $('.notfound-content').show();
-    $('.line-content').hide();
+
+    // Update containers visibility
+    $('.line-container').hide();
+    $('.categories-container').hide();
+    $('.notfound-container').show();
   }
 }

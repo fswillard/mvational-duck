@@ -71,13 +71,14 @@ hr {
 .page-footer {
   position: relative;
   text-align: center;
+  margin-top: 1em;
   bottom: 0;
   left: 0;
   right: 0;
   flex: 0 0 auto;
 }
 
-.line-container {
+.line-section {
   width: calc(100% - 250px);
   margin: 2.5em auto 3em;
   color: #172238;
@@ -178,7 +179,6 @@ hr {
 .footer {
   height: 155px;
   padding: 1em;
-  margin-top: 1em;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -198,6 +198,8 @@ hr {
   justify-content: center;
 }
 
-.notfound-content {
+.line-container,
+.notfound-container,
+.categories-container {
   display: none;
 }
