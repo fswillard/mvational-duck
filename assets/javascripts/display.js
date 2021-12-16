@@ -3,33 +3,45 @@ const LINES = ['As vezes,|é melhor ter paz|do que estar com|a razão','Mergulhe
 
 // Display module
 var Display = {
+  // Display share window
   display_href: function(href) {
     var attributes = 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600';
     window.open(href, '', attributes);
   },
 
+  // Display motivational line
   display_line: function(index) {
     $('#line').html('<h1>' + LINES[index].split('|').join('</h1><h1>') + '</h1>')
   },
 
+  // Display copyright year at footer
   display_year: function() {
     var year = new Date().getFullYear();
     $('#year').html('&copy; ' + year + ' Pato Motivacional');
   },
 
-  random_display: function() {
-    let index = Math.floor(Math.random() * 101),
-        shr_code = CryptKey.encrypt_key(index);
-
-    Display.display_line(index);
-    Share.display_shr_code(shr_code);
+  // Display all motivational line links
+  display_links: function() {
+    for (var i = 0; i < 101; i++) {
+      $('#categories-list').append(
+        '<a href="https://patomotivacional.com.br/m/' + CryptKey.encrypt_key(i) +
+        '">Motivacional #' +
+        (i + 1) + '</a>'
+      )
+    }
   },
 
-  search_display: function(param) {
-    let index = CryptKey.decrypt_key(param),
-        shr_code = param;
+  // Display motivational line and share buttons
+  display_motivational: function(enc_index) {
+    let index = CryptKey.decrypt_key(enc_index);
 
     Display.display_line(index);
-    Share.display_shr_code(shr_code);
+    Share.display_share_buttons();
+  },
+
+  display_not_found: function() {
+    $('#notfound').html('<h1>Ops..</h1><h1>Essa página não existe</h1>');
+    $('.notfound-content').show();
+    $('.line-content').hide();
   }
 }

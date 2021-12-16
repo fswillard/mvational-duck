@@ -1,7 +1,7 @@
 // Validation module
 var Validator = {
   is_valid_code: function(code) {
-    if (code == undefined || code == '') {
+    if (code == undefined || code == '' || code == false) {
       return false
     } else {
       try {
@@ -21,14 +21,13 @@ var Validator = {
   },
 
   valid_code: function() {
-    var search = window.location.search;
+    var loc_href = window.location.pathname,
+        regex = new RegExp(/\/m\/(.*)/g);
 
-    if (search == undefined || search == '') {
-      return ''
-    } else {
-      var regex = new RegExp(/q\=(.+?)\&/gi);
-
-      return(regex.exec(search + '&')[1]);
+    try {
+      return(regex.exec(loc_href)[1]);
+    } catch (e) {
+      return false
     }
   }
 }

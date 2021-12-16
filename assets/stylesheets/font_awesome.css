@@ -49,6 +49,12 @@ a.fa-twitter {
   padding: 10px 9px 10px 11px;
 }
 
+a.fa-home {
+  border-color: #404040;
+  color: #404040;
+  padding: 10px 9px;
+}
+
 a.fa-clone {
   border-color: #ff1a75;
   color: #ff1a75;

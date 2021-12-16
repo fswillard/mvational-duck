@@ -42,7 +42,6 @@ h1 {
   margin: 0;
   line-height: 1.3em;
   font-size: 1.8em;
-  color: #172238;
 }
 
 h3 {
@@ -57,26 +56,101 @@ hr {
   display: none;
 }
 
-.container {
+.app-content {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.page-content {
+  text-align: center;
+  flex: 1 1 auto;
+}
+
+.page-footer {
+  position: relative;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex: 0 0 auto;
+}
+
+.line-container {
   width: calc(100% - 250px);
   margin: 2.5em auto 3em;
+  color: #172238;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 70%;
+}
+.categories-container {
+  width: calc(100% - 250px);
+  margin: 1em auto;
+  color: #172238;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 70%;
+}
+
+.categories {
+  padding: 2em 0;
+  border-radius: 1em;
+  background-color: rgba(28, 28, 28, 0.9);
+}
+
+.categories-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: #ccc 2px solid;
+  border-top: #ccc 2px solid;
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+}
+
+.categories-list a {
+  padding: 1em 0;
+  font-size: 12px;
+  flex: 0 0 19%;
+  text-decoration: none;
+  border-radius: 1em;
+  color: #fafafa;
+}
+
+.categories-list a:hover,
+.categories-list a:focus,
+.categories-list a:visited,
+.categories-list a:active {
+  background-color: rgba(100, 100, 100, 0.6);
+  outline: none;
+  -moz-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  -moz-outline-style: none;
 }
 
 .line {
   min-width: 30em;
   animation: display-anim 0.5s ease-in-out;
 }
+
+.categories {
+  animation: display-anim 0.5s ease-in-out;
+}
+
 .duck {
   animation: display-anim 0.5s ease-in-out;
   max-height: 400px;
 }
+
 .options {
   animation: display-anim 1s ease-in-out;
+  margin: 10px auto;
 }
+
 .footer-box {
   animation: display-anim 0.5s ease-in-out;
 }
@@ -104,6 +178,7 @@ hr {
 .footer {
   height: 155px;
   padding: 1em;
+  margin-top: 1em;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -121,4 +196,8 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.notfound-content {
+  display: none;
 }

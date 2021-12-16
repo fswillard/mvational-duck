@@ -1,18 +1,17 @@
 // Share module
 var Share = {
-  display_shr_code: function(shr_code) {
+  display_share_buttons: function() {
     // Generate encoded URL with share code
-    var loc_href = window.location.href.split("?")[0],
-        enc_href = loc_href + '?q=' + shr_code;
+    var loc_href = window.location.href.split("?")[0]
 
-    Share.assign_facebook_href(enc_href);
-    Share.assign_twitter_href(enc_href);
-    Share.assign_copy_href(enc_href);
-    Share.assign_reload_href(loc_href);
+    Share.assign_facebook_href(loc_href);
+    Share.assign_twitter_href(loc_href);
+    Share.assign_copy_href(loc_href);
+    Share.assign_random_href();
   },
 
   assign_facebook_href: function(href) {
-    // Update links href attribute
+    // Update Facebook link href
     $('#options-facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + href + '&t=Pato Motivacional');
 
     // Update Facebook action
@@ -23,7 +22,7 @@ var Share = {
   },
 
   assign_twitter_href: function(href) {
-    // Update links href attribute
+    // Update Twitter link href
     $('#options-twitter').attr('href', 'https://twitter.com/share?url=' + href + '&text=Pato Motivacional');
 
     // Update Twitter action
@@ -33,14 +32,13 @@ var Share = {
     });
   },
 
-  assign_reload_href: function(href) {
-    // Assign function to reload button
-    $('#options-reload').click(function(e) {
-      e.preventDefault();
+  assign_random_href: function(href) {
+    // Generate random motivational line enc_index
+    let index = Math.floor(Math.random() * 101),
+        enc_index = CryptKey.encrypt_key(index);
 
-      window.history.pushState('', '', href);
-      location.reload();
-    });
+    // Update random link href
+    $('#options-random').attr('href', 'https://patomotivacional.com.br/m/' + enc_index);
   },
 
   assign_copy_href: function(href) {
