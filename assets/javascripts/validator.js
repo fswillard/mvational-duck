@@ -22,7 +22,7 @@ var Validator = {
 
   valid_code: function() {
     var loc_href = window.location.pathname,
-        regex = new RegExp(/\/m\/(.+?)\~/g);
+        regex = new RegExp(/\/m\/(.+?)[\~\&]/g);
 
     try {
       return(regex.exec(loc_href + '~')[1]);
