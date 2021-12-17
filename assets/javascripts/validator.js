@@ -25,6 +25,7 @@ var Validator = {
         regex = new RegExp(/\/m\/(.+?)[\~\&]/g);
 
     try {
+      console.log(loc_href)
       return(regex.exec(loc_href + '~')[1]);
     } catch (e) {
       return false
