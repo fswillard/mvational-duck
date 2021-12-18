@@ -39,7 +39,6 @@ var Display = {
     // Update containers visibility
     $('.line-container').hide();
     $('.categories-container').css('display', 'flex');
-    $('.notfound-container').hide();
   },
 
   // Display motivational line and share buttons
@@ -52,15 +51,5 @@ var Display = {
     // Update containers visibility
     $('.line-container').show();
     $('.categories-container').hide();
-    $('.notfound-container').hide();
-  },
-
-  display_not_found: function() {
-    $('#notfound').html('<h1>Ops..</h1><h1>Essa página não existe</h1>');
-
-    // Update containers visibility
-    $('.line-container').hide();
-    $('.categories-container').hide();
-    $('.notfound-container').show();
   }
 }
