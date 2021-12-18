@@ -2,7 +2,7 @@
 var Share = {
   display_share_buttons: function() {
     // Generate encoded URL with share code
-    var loc_href = window.location.href.split(/[\?\~\&]/g)[0]
+    var loc_href = window.location.href.split(/[\~\&]/g)[0]
 
     Share.assign_facebook_href(loc_href);
     Share.assign_twitter_href(loc_href);
@@ -38,7 +38,7 @@ var Share = {
         enc_index = CryptKey.encrypt_key(index);
 
     // Update random link href
-    $('#options-random').attr('href', 'https://patomotivacional.com.br/m/' + enc_index);
+    $('#options-random').attr('href', 'https://patomotivacional.com.br/?/m/' + enc_index);
   },
 
   assign_copy_href: function(href) {

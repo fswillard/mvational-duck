@@ -1,6 +1,3 @@
-// Update window location
-window.history.pushState({ page: 1 }, "Pato Motivacional", window.location.href.replace(/\?\//g, ''));
-
 // Verify for valid motivational code
 var code = Validator.valid_code();
 

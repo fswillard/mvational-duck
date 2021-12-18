@@ -24,7 +24,7 @@ var Display = {
   display_links: function() {
     for (var i = 0; i < 101; i++) {
       $('#categories-list').append(
-        '<a href="https://patomotivacional.com.br/m/' + CryptKey.encrypt_key(i) +
+        '<a href="https://patomotivacional.com.br/?/m/' + CryptKey.encrypt_key(i) +
         '">Motivacional #' +
         (i + 1) + '</a>'
       )
