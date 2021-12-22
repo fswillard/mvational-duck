@@ -9,10 +9,11 @@ a.far {
   text-decoration: none;
   border-radius: 50px;
   padding: 10px;
-  color: #249e61;
-  border: solid 4px #249e61;
+  color: #595f64;
+  border: solid 4px #595f64;
   background-color: transparent;
 }
+
 a.fas:hover,
 a.fab:hover,
 a.far:hover,
@@ -26,6 +27,7 @@ a.fas:focus,
 a.fab:focus,
 a.far:focus {
   filter: brightness(1.1);
+  color: #595f64;
   outline: none;
   -moz-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
@@ -37,25 +39,14 @@ a:not(:first-of-type) {
 }
 
 a.fa-facebook-f {
-  border-color: #2241a0;
-  color: #2241a0;
   margin-left: 0.5em;
   padding: 10px 14px;
 }
 
 a.fa-twitter {
-  border-color: #008ae6;
-  color: #008ae6;
   padding: 10px 9px 10px 11px;
 }
 
 a.fa-home {
-  border-color: #404040;
-  color: #404040;
   padding: 10px 9px;
-}
-
-a.fa-clone {
-  border-color: #ff1a75;
-  color: #ff1a75;
 }

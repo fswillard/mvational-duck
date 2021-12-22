@@ -1,63 +1,23 @@
 @media screen and (max-width: 850px) {
-  body {
-    background-image: linear-gradient(255deg, rgba(240, 220, 105, 0.1) 0, rgba(240, 220, 105, 0.4) 100%, transparent 100%),
-                      linear-gradient(-56deg, rgba(237, 169, 12, 0.4) 0, rgba(237, 169, 12, 0.6) 60%, transparent 60%),
-                      linear-gradient(84deg, rgba(240, 191, 31, 0.3) 0, rgba(240, 191, 31, 0.5) 40%, transparent 30%);
+  h2 {
+    font-size: 1.2rem !important;
   }
 
-  h1 {
-    font-size: 1.3em !important;
+  a.fas,
+  a.fab,
+  a.far {
+    font-size: 1.2rem !important;
   }
 
-  hr {
-    display: block;
+  a.fa-facebook-f {
+    padding: 10px 13px !important;
   }
 
-  .line-section {
-    width: 100% !important;
-    flex-direction: column !important;
-    margin: 2em auto !important;
-    height: 70%;
+  .carousel {
+    height: 77vh;
   }
 
-  .categories-container {
-    width: calc(100% - 4em) !important;
-    margin: 2em !important;
-    color: #172238;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .categories-list a {
-    flex: 0 0 24%;
-  }
-
-  .line {
-    min-width: unset;
-  }
-
-  .duck {
-    margin-top: 2em;
-    width: 50%;
-  }
-
-  .categories-duck {
-    display: none;
-  }
-
-  .footer {
-    height: auto;
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #21242b;
-  }
-
-  .footer-box {
-    width: 100% !important;
-    padding: 1em 0;
+  .carousel-image {
+    max-height: 275px !important;
   }
 }
