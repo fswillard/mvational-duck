@@ -21,11 +21,10 @@ var Validator = {
   },
 
   valid_code: function() {
-    var loc_href = window.location.href,
-        regex = new RegExp(/\/m\/(.+?)[\~\&\#]/g);
+    var url_search = new URLSearchParams(window.location.search);
 
     try {
-      return(regex.exec(loc_href + '~')[1]);
+      return(url_search.get('m'));
     } catch (e) {
       return false
     }

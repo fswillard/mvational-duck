@@ -2,7 +2,7 @@
 var Share = {
   assign_share_buttons: function(code) {
     // Generate URL with share code
-    var shr_href = window.location.origin + '/?/m/' + code
+    var shr_href = window.location.origin + '/?m=' + code
 
     Share.assign_facebook_href(shr_href);
     Share.assign_twitter_href(shr_href);
