@@ -9,7 +9,7 @@ var Validator = {
 
         if (parseInt(index) == NaN) {
           return false
-        } else if (LINES[index] == undefined) {
+        } else if (MOTIVATIONALS[code] == undefined) {
           return false
         }
       } catch (e) {
@@ -22,7 +22,7 @@ var Validator = {
 
   valid_code: function() {
     var loc_href = window.location.href,
-        regex = new RegExp(/\/m\/(.+?)[\~\&]/g);
+        regex = new RegExp(/\/m\/(.+?)[\~\&\#]/g);
 
     try {
       return(regex.exec(loc_href + '~')[1]);
